@@ -1,2 +1,4 @@
 export const DOGS_LISTS = "DOGS_LISTS";
 export const DOG_DETAIL = "DOG_DETAIL";
+export const DOG_ADOPT_INSERT = "DOG_ADOPT_INSERT";
+export const DOG_ADOPT_REMOVE = "DOG_ADOG_ADOPT_REMOVEDOPT";

@@ -7,6 +7,7 @@ import {
 
 import IndexPages from "../pages/index/indexPages";
 import DogsDetails from "../pages/dogsDetails";
+import Adopt from "../pages/adopt";
 
 export default function Routers() {
 
@@ -17,6 +18,9 @@ export default function Routers() {
       </Route>
       <Route exact path="/detail/:id">
         <DogsDetails />
+      </Route>
+      <Route exact path="/adoper/">
+        <Adopt />
       </Route>
     </Switch>
   );

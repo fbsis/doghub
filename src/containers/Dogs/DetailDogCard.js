@@ -1,18 +1,16 @@
 import React, { useEffect } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { useParams } from "react-router-dom";
-import { useSelector, useDispatch, dispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import {
     Typography,
     Card,
-    CardActionArea,
     CardContent,
     CardMedia,
     Button
 } from '@material-ui/core';
-import { getDog } from "../../store/dogs/actions";
-
+import { getDog, adopt } from "../../store/dogs/actions";
 
 const useStyles = makeStyles({
     root: {
@@ -48,7 +46,7 @@ const useStyles = makeStyles({
     }
 });
 
-function DetailsDog(props) {
+function DetailsDog() {
     const classes = useStyles();
     const dispatch = useDispatch();
 
@@ -76,6 +74,9 @@ function DetailsDog(props) {
 
     const tags = temperament.split(",");
 
+    const handlerAdopt = (dog) => {
+        dispatch(adopt(dog));
+    }
 
     return (
         <Card className={
@@ -122,7 +123,7 @@ function DetailsDog(props) {
                     <Typography className={classes.caracterist}>
                         weight: {weight.metric} </Typography>
                 </div>
-                <Button variant="contained" fullWidth className={classes.adopterButtom} onClick={() => console.log("adotar")}>
+                <Button variant="contained" fullWidth className={classes.adopterButtom} onClick={() => handlerAdopt(dog)}>
                     Adotar
                 </Button>
             </CardContent>

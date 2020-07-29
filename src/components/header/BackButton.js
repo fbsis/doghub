@@ -19,16 +19,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function BackButton({ history: { goBack }, children, ...props }) {
+function BackButton({ history: { goBack }, children, staticContext, ...props }) {
     const classes = useStyles();
     const history = useHistory();
 
-    if (history.location.pathname === "/"){
+    if (history.location.pathname === "/") {
         return null;
     }
-        
 
-    console.log(props);
     return (
         <IconButton edge="start" color="inherit" className={classes.menuButton} {...props} onClick={goBack}>
             <ArrowBackIcon />

@@ -33,3 +33,32 @@ export const getDog = (id) => async (dispatch) => {
 
 
 };
+
+export const adopt = (dog) => async (dispatch) => {
+    try {
+        dispatch({
+            type: actionTypes.DOG_ADOPT_INSERT,
+            dogAdopt: dog
+        });
+    } catch (error) {
+        //TO-DO colocar erro de arquivo não encontrado
+        console.log('adopt dog', error)
+    }
+
+
+};
+
+
+export const adopt_remove = (dog) => async (dispatch) => {
+    try {
+        dispatch({
+            type: actionTypes.DOG_ADOPT_REMOVE,
+            dogAdopt: dog
+        });
+    } catch (error) {
+        //TO-DO colocar erro de arquivo não encontrado
+        console.log('adopt dog', error)
+    }
+
+
+};
