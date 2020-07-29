@@ -1,1 +1,1 @@
-All components that are presentational (headers, footers)
+All components that are presentational, headers, footers and generical components to use in more than one place

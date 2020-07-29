@@ -1,0 +1,1 @@
+all componentes that contains the business logic of application (product list, product details, login forms)
