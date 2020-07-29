@@ -23,8 +23,10 @@ function BackButton({ history: { goBack }, children, ...props }) {
     const classes = useStyles();
     const history = useHistory();
 
-    if (history.length === 2 || history.location.pathname === "/")
+    if (history.location.pathname === "/"){
         return null;
+    }
+        
 
     console.log(props);
     return (

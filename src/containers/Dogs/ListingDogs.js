@@ -7,7 +7,7 @@ import {
 } from "./../../store/dogs/actions";
 
 
-import DetailsDog from "./DetailsDogCard";
+import DetailsDog from "./DogCard";
 
 
 function ListingDogs() {

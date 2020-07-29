@@ -1,7 +1,8 @@
 import * as actionTypes from "./actionsType";
 
 const INITIAL_STATE = {
-    dogs: []
+    dogs: [],
+    dog: {}
 };
 
 // reducers
@@ -12,7 +13,11 @@ export default function (state = INITIAL_STATE, action) {
                 ...state,
                 dogs: action.dogs
             };
-
+            case actionTypes.DOG_DETAIL:
+                return {
+                    ...state,
+                    dog: action.dog
+                };
 
         default:
             return state;

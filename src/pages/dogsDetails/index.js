@@ -1,12 +1,14 @@
 import React from "react";
 
 import CounterIcon from "../../containers/Dogs/CounterIcon";
+import DetailDogCard from "../../containers/Dogs/DetailDogCard";
 import AplicationComponents from "../../components/AplicationComponents"
 
 
-function DogsDetails() {
+function DogsDetails(props) {
+
     return (
-        <AplicationComponents title="Para adoção"
+        <AplicationComponents title="Detalhes"
             header={
                 {
                     right: (
@@ -14,7 +16,7 @@ function DogsDetails() {
                     )
                 }
             }>
-            detalhes
+            <DetailDogCard/>
 
         </AplicationComponents>
     );

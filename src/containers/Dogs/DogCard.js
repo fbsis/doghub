@@ -27,7 +27,9 @@ const useStyles = makeStyles({
     tag: {
         margin: 5,
         alignSelf: "center",
-        borderColor: "#000"
+        borderColor: "#000",
+        color: "#6C6C6C",
+        fontWeight: "bold",
     }
 });
 
