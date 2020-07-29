@@ -20,7 +20,7 @@ function AplicationComponents(props) {
         <ThemeProvider theme={theme}>
             <HeaderComponents {...props.header} />
             <CssBaseline />
-            <Container maxWidth="sm" style={{backgroundColor: "#eeeeee"}}>
+            <Container  style={{backgroundColor: "#eeeeee"}}>
                 <Typography variant="h6" align="center">
                     {props.title}
                 </Typography>

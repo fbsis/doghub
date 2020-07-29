@@ -1,8 +1,9 @@
 import React from "react";
 
-import {AppBar, makeStyles, Toolbar} from "@material-ui/core";
+import { AppBar, makeStyles, Toolbar } from "@material-ui/core";
 
 import LogoComponents from "../LogoComponents/LogoComponents";
+import BackButton from "./BackButton";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -24,6 +25,7 @@ const useStyles = makeStyles(() => ({
 function HeaderComponents(props) {
     const classes = useStyles();
 
+
     return (
         <span className={
             classes.root
@@ -31,17 +33,19 @@ function HeaderComponents(props) {
             <AppBar position="static"
                 className={
                     classes.AppBar
-            }>
+                }>
                 <Toolbar className={
                     classes.Toolbar
                 }>
-                    <LogoComponents/>
+                    <BackButton />
+
+                    <LogoComponents />
                     <section className={
                         classes.itemRight
                     }>
                         {
-                        props.right
-                    } </section>
+                            props.right
+                        } </section>
                 </Toolbar>
             </AppBar>
         </span>

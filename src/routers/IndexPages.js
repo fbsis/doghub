@@ -6,6 +6,7 @@ import {
 
 
 import IndexPages from "../pages/index/indexPages";
+import DogsDetails from "../pages/dogsDetails";
 
 export default function Routers() {
 
@@ -13,6 +14,9 @@ export default function Routers() {
     <Switch>
       <Route exact path="/">
         <IndexPages />
+      </Route>
+      <Route exact path="/detail/:id">
+        <DogsDetails />
       </Route>
     </Switch>
   );

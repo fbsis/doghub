@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
+import { useHistory } from "react-router-dom";
 
 import {
     Typography,
@@ -32,15 +33,16 @@ const useStyles = makeStyles({
 
 function DetailsDog({ id, name, temperament }) {
     const classes = useStyles();
+    const history = useHistory();
 
     const tags = temperament.split(",");
 
-    const handlerClick = () => {
-        console.log("next page");
+    const handlerClick = (id) => {
+        history.push(`/detail/${id}`);
     }
 
     return (
-        <Card className={classes.root} onClick={handlerClick}>
+        <Card className={classes.root} onClick={() => handlerClick(id)}>
             <CardActionArea>
                 <CardMedia className={
                     classes.media
